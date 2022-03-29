@@ -9,7 +9,9 @@ Group:          System Environment/Libraries
 URL:            http://www.cpanel.net
 Vendor:         cPanel, Inc.
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 BuildRequires:  ea-nginx-ngxdev
+Requires:       ea-nginx
 
 Source0:        %{version}.tar.gz
 Source1:        ngx_njs_module.conf
