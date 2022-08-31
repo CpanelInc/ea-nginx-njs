@@ -1,4 +1,5 @@
 {
+   "ignore_override_dh_auto_build" : true,
    "override_vars" : {
       "_libdir" : "/usr/lib64",
       "buildroot" : "/usr/src/packages/BUILD/debian/tmp"
