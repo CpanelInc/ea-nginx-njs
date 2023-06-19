@@ -1,7 +1,7 @@
 Name:           ea-nginx-njs
 Version:        0.7.12
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
-%define release_prefix 1
+%define release_prefix 2
 Release:        %{release_prefix}%{?dist}.cpanel
 Summary:        njs scripting language for ea-nginx
 License:        2-clause BSD-like license
@@ -59,6 +59,9 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
+* Thu Jun 15 2023 Cory McIntire <cory@cpanel.net> - 0.7.12-2
+- EA-11496: Build against ea-nginx version v1.25.1
+
 * Wed Apr 12 2023 Cory McIntire <cory@cpanel.net> - 0.7.12-1
 - EA-11351: Update ea-nginx-njs from v0.7.11 to v0.7.12
 
