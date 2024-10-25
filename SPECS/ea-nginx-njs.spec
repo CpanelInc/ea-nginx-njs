@@ -1,5 +1,5 @@
 Name:           ea-nginx-njs
-Version:        0.8.6
+Version:        0.8.7
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
 %define release_prefix 1
 Release:        %{release_prefix}%{?dist}.cpanel
@@ -59,6 +59,9 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
+* Tue Oct 22 2024 Cory McIntire <cory@cpanel.net> - 0.8.7-1
+- EA-12492: Update ea-nginx-njs from v0.8.6 to v0.8.7
+
 * Tue Oct 01 2024 Cory McIntire <cory@cpanel.net> - 0.8.6-1
 - EA-12441: Update ea-nginx-njs from v0.8.5 to v0.8.6
 
