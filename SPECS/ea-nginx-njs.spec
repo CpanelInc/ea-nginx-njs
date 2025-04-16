@@ -1,7 +1,7 @@
 Name:           ea-nginx-njs
-Version:        0.8.9
+Version:        0.8.10
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
-%define release_prefix 2
+%define release_prefix 1
 Release:        %{release_prefix}%{?dist}.cpanel
 Summary:        njs scripting language for ea-nginx
 License:        2-clause BSD-like license
@@ -59,6 +59,9 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
+* Tue Apr 08 2025 Cory McIntire <cory.mcintire@webpros.com> - 0.8.10-1
+- EA-12805: Update ea-nginx-njs from v0.8.9 to v0.8.10
+
 * Tue Feb 11 2025 Cory McIntire <cory.mcintire@webpros.com> - 0.8.9-2
 - EA-12703: Build against ea-nginx version v1.26.3
 
