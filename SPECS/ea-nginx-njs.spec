@@ -60,7 +60,7 @@ rm -rf %{buildroot}
 
 %changelog
 * Wed May 20 2026 EA4 Update Bot <cory.mcintire@webpros.com> - 0.9.9-1
-- EA-13442: Update ea-nginx-njs from v0.9.8 to v0.9.9
+- EA-13442: Update ea-nginx-njs from v0.9.8 to v0.9.9 (CVE-2026-8711)
 
 * Wed May 13 2026 Cory McIntire <cory.mcintire@webpros.com> - 0.9.8-2
 - EA-13436: Build against ea-nginx version v1.31.0
