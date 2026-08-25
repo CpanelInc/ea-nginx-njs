@@ -1,7 +1,7 @@
 Name:           ea-nginx-njs
 Version:        1.0.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
-%define release_prefix 4
+%define release_prefix 5
 Release:        %{release_prefix}%{?dist}.cpanel
 Summary:        njs scripting language for ea-nginx
 License:        2-clause BSD-like license
@@ -37,20 +37,7 @@ into your custom configurations.
 #    so that configure and make etc can happen.
 # We probably want to popd back when we are done in there
 . /opt/cpanel/ea-nginx-ngxdev/set_NGINX_CONFIGURE_array.sh
-# nginx auto/lib/pcre/conf probes PCRE2 first and only falls back to PCRE1, and
-# BASE_CONFIGURE_ARGS in ea-nginx.spec passes no pcre flag - so ngx-configure-args
-# carries no choice and this module re-detects on its own. On Ubuntu that diverged:
-# pcre-devel maps to the Debian alternation "libpcre3-dev | libpcre2-dev", ea-nginx
-# resolved libpcre3-dev (PCRE1) and this package resolved libpcre2-dev, so the module
-# wanted pcre2_*_8 symbols the nginx binary does not export and failed to dlopen.
-# Pin the choice to whatever ea-nginx used rather than re-probing: it takes pcre-devel
-# below rhel 10 and pcre2-devel at or above it, and %{?rhel} is undefined on Debian so
-# this branch matches ea-nginx there too. EA4-317.
-%if 0%{?rhel} < 10
-./auto/configure "${NGINX_CONFIGURE[@]}" --without-pcre2 --add-dynamic-module=../nginx/
-%else
 ./auto/configure "${NGINX_CONFIGURE[@]}" --add-dynamic-module=../nginx/
-%endif
 make %{?_smp_mflags}
 popd
 
@@ -72,6 +59,9 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
+* Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-5
+- EA4-317: Pin the Ubuntu build root to PCRE1 so the module matches ea-nginx
+
 * Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-4
 - EA4-317: Build against the same PCRE library as ea-nginx so the module loads on Ubuntu
 
