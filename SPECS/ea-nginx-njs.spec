@@ -1,7 +1,7 @@
 Name:           ea-nginx-njs
 Version:        1.0.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
-%define release_prefix 6
+%define release_prefix 7
 Release:        %{release_prefix}%{?dist}.cpanel
 Summary:        njs scripting language for ea-nginx
 License:        2-clause BSD-like license
@@ -59,6 +59,9 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
+* Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-7
+- EA4-317: Drop the PCRE build-dep now that ea-nginx uses PCRE2 on Debian
+
 * Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-6
 - EA4-317: Prefer PCRE1 headers in the Debian build root so the module matches ea-nginx
 
