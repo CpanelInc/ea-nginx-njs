@@ -1,0 +1,48 @@
+<buildstatistics>
+  <disk>
+    <usage>
+      <size unit="M">909</size>
+      <io_requests>59096</io_requests>
+      <io_sectors>3440378</io_sectors>
+    </usage>
+  </disk>
+  <memory>
+    <usage>
+      <size unit="M">231</size>
+    </usage>
+  </memory>
+  <times>
+    <total>
+      <time unit="s">137</time>
+    </total>
+    <preinstall>
+      <time unit="s">6</time>
+    </preinstall>
+    <install>
+      <time unit="s">31</time>
+    </install>
+    <main>
+      <time unit="s">91</time>
+    </main>
+    <postchecks>
+      <time unit="s">0</time>
+    </postchecks>
+    <rpmlint>
+      <time unit="s">0</time>
+    </rpmlint>
+    <buildcmp>
+      <time unit="s">0</time>
+    </buildcmp>
+    <deltarpms>
+      <time unit="s">0</time>
+    </deltarpms>
+    <download>
+      <time unit="s">3</time>
+    </download>
+  </times>
+  <download>
+    <size unit="k">1496</size>
+    <binaries>2055</binaries>
+    <cachehits>0</cachehits>
+  </download>
+</buildstatistics>

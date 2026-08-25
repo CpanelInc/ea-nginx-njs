@@ -1,7 +1,7 @@
 Name:           ea-nginx-njs
-Version:        1.0.0
+Version:        0.9.8
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4552 for more details
-%define release_prefix 6
+%define release_prefix 1
 Release:        %{release_prefix}%{?dist}.cpanel
 Summary:        njs scripting language for ea-nginx
 License:        2-clause BSD-like license
@@ -59,33 +59,6 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/nginx/modules/ngx_stream_js_module.so
 
 %changelog
-* Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-6
-- EA4-317: Prefer PCRE1 headers in the Debian build root so the module matches ea-nginx
-
-* Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-4
-- EA4-317: Build against the same PCRE library as ea-nginx so the module loads on Ubuntu
-
-* Tue Aug 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-3
-- EA-13535: Build against ea-nginx version v1.31.4
-
-* Thu Jul 16 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-2
-- EA-13503: Build against ea-nginx version v1.31.3
-
-* Tue Jun 23 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.0.0-1
-- EA-13470: Update ea-nginx-njs from v0.9.9 to v1.0.0
-
-* Wed Jun 17 2026 Cory McIntire <cory.mcintire@webpros.com> - 0.9.9-3
-- EA-13466: Rebuild against ea-nginx 1.31.2
-
-* Fri May 22 2026 Cory McIntire <cory.mcintire@webpros.com> - 0.9.9-2
-- EA-13448: Build against ea-nginx version v1.31.1
-
-* Wed May 20 2026 EA4 Update Bot <cory.mcintire@webpros.com> - 0.9.9-1
-- EA-13442: Update ea-nginx-njs from v0.9.8 to v0.9.9 (CVE-2026-8711)
-
-* Wed May 13 2026 Cory McIntire <cory.mcintire@webpros.com> - 0.9.8-2
-- EA-13436: Build against ea-nginx version v1.31.0
-
 * Thu Apr 30 2026 EA4 Update Bot <cory.mcintire@webpros.com> - 0.9.8-1
 - EA-13420: Update ea-nginx-njs from v0.9.7 to v0.9.8
 
