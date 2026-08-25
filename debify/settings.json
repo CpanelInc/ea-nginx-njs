@@ -1,4 +1,7 @@
 {
+   "add_to_build_requires" : [
+      "libpcre3-dev"
+   ],
    "ignore_override_dh_auto_build" : true,
    "override_vars" : {
       "_libdir" : "/usr/lib64",
