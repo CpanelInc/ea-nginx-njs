@@ -1,0 +1,9 @@
+<package name="ea-nginx-njs" project="EA4-production">
+  <title>ea-nginx-njs</title>
+  <description/>
+  <build>
+    <disable arch="i586"/>
+    <disable repository="CentOS_6.5_standard"/>
+  </build>
+</package>
+

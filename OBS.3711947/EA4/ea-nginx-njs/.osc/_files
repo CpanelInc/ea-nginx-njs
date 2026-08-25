@@ -1,0 +1,8 @@
+<directory name="ea-nginx-njs" rev="68" vrev="9" srcmd5="65dd02f5134b255cb89c8e59da96648a">
+  <entry name="1.0.0.tar.gz" md5="7b6824c93e8fa79b8fcdf35b85ecc7ce" size="1011616" mtime="1782240260" />
+  <entry name="ea-nginx-njs.spec" md5="17511fd13a6a9cad64ee5e91f4fee5a7" size="8703" mtime="1787697358" />
+  <entry name="ea-nginx-njs_1.0.0-5.debian.tar.gz" md5="c164627ce374f00caa1132dbe2728396" size="3981" mtime="1787697358" />
+  <entry name="ea-nginx-njs_1.0.0.dsc" md5="862616b3fcec96dc33057cc9f00fd1d1" size="666" mtime="1787697358" />
+  <entry name="ea-nginx-njs_1.0.0.orig.tar.gz" md5="7b6824c93e8fa79b8fcdf35b85ecc7ce" size="1011616" mtime="1782240261" />
+  <entry name="ngx_njs_module.conf" md5="8f47c268d6c78e43960d302cfb563c72" size="88" mtime="1647349749" />
+</directory>
